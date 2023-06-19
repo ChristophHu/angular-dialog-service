@@ -3,3 +3,135 @@
 @import 'tailwindcss/base'
 @import 'tailwindcss/components'
 @import 'tailwindcss/utilities'
+
+@import url(https://cdn.jsdelivr.net/npm/shut@6/dist/css/sh.min.css)
+/* style it, the bare minimum */
+
+:root 
+  --sh-modal-index: 1040
+  --sh-modal-index-10: 1030
+  --sh-modal-margin: 1.2rem
+  --sh-modal-padding: 0.6rem
+  --sh-modal-bg: rgba(0, 0, 0, 0.6)
+  --sh-trans-func: cubic-bezier(0.4, 0, 0.2, 1)
+
+// .dialog-overlay 
+//   position: fixed
+//   top: 0
+//   right: 0
+//   bottom: 0
+//   left: 0
+//   z-index: var(--sh-modal-index-10)
+//   background-color: var(--sh-modal-bg)
+//   display: flex
+//   align-items: center
+//   justify-content: center
+
+
+// .dialog 
+//   background-color: var(--sh-white)
+//   width: clamp(300px, 75vw, 90vw)
+//   z-index: var(--sh-modal-zindex)
+//   overflow: hidden
+//   outline: 0
+//   display: flex
+//   flex-direction: column
+//   max-height: calc(100vh - var(--sh-modal-margin) * 2)
+//   position: relative
+//   background-clip: padding-box
+//   box-shadow: 0 16px 24px 2px rgba(#000, 0.14), 0 6px 30px 5px rgba(#000, 0.12), 0 8px 10px -5px rgba(#000, 0.3)
+
+
+.dialog-header 
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: var(--sh-modal-padding)
+
+
+.dialog-body 
+  position: relative
+  flex: 1 1 auto
+  padding: var(--sh-modal-padding)
+  overflow-y: auto
+
+
+/* extra styles and animation */
+
+.dialog-bottom-sheet .dialog-overlay 
+  align-items: flex-end
+
+
+.dialog-full-height .dialog 
+  height: calc(100vh - var(--sh-modal-margin) * 2)
+
+
+.dialog-full-screen .dialog 
+  min-height: calc(var(--vh, 1vh) * 100)
+  max-height: calc(var(--vh, 1vh) * 100)
+  width: 100vw
+
+
+.dialog-half-screen .dialog-overlay 
+  justify-content: flex-start
+
+.dialog-half-screen .dialog 
+  max-width: 50vw
+  min-height: calc(var(--vh, 1vh) * 100)
+  max-height: calc(var(--vh, 1vh) * 100)
+
+.reverse .dialog-overlay 
+  justify-content: flex-end
+
+.animate.fromleft .dialog 
+  transform: translateX(-100%)
+  animation: fromleft 0.15s var(--sh-trans-func) 0.15s
+  animation-fill-mode: forwards
+
+.animate.fromright .dialog 
+  transform: translateX(100%)
+  animation: fromright 0.15s var(--sh-trans-func) 0.15s
+  animation-fill-mode: forwards
+
+.animate.fromtop .dialog 
+  transform: translateY(-100%)
+  animation: fromtop 0.15s var(--sh-trans-func) 0.15s
+  animation-fill-mode: forwards
+
+.animate.frombottom .dialog 
+  transform: translateY(100%)
+  animation: frombottom 0.15s var(--sh-trans-func) 0.15s
+  animation-fill-mode: forwards
+
+
+@keyframes fromleft 
+  from 
+    transform: translateX(-100%)
+  
+  to 
+    transform: translateX(0)
+  
+
+@keyframes fromright 
+  from 
+    transform: translateX(100%)
+  
+  to 
+    transform: translateX(0)
+  
+
+@keyframes frombottom 
+  from 
+    transform: translateY(100%)
+  
+  to 
+    transform: translateY(0)
+  
+
+@keyframes fromtop 
+  from 
+    transform: translateY(-100%)
+  
+  to 
+    transform: translateY(0)
+  
