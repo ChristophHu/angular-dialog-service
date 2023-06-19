@@ -1,5 +1,7 @@
 # AngularDialogService
 
+https://medium.com/@aayyash/homemade-dialog-service-in-angular-f99a4b34c55a
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
 ## Development server
