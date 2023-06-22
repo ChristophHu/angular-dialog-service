@@ -1,16 +1,73 @@
-<!-- <div class="bg-gray-100 animate.fromright min-h-32 w-128 p-3 rounded shadow-lg">
+<!-- <div class="bg-gray-100 min-h-32 w-128 p-3 rounded shadow-lg">
     Hello {{ peachSomething }} <br>
     <button class="btn-rev" (click)="ok()">Yes Iniside peech</button>
     <button class="btn-rev" (click)="click()">On peach event</button>
     <button class="btn-rev" (click)="close()">Close rose</button>
 </div> -->
 
-<div class="absolute flex w-128 top-0 justify-center bg-red-100">
-    test
+<div class="flex flex-col w-128 m-4 bg-gray-100 rounded-lg shadow-lg">
+    <div class="p-3 text-center">
+        {{ peachSomething }}
+    </div>
+    <footer class="flex flex-col w-full p-3">
+        <div class="flex flex-row pt-2 justify-between">
+            <div class="flex items-center text-md text-gray-800">Streife vorbereiten</div>
+            <div class="w-12 p-1 bg-blue-500 text-white rounded cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentcolor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                    <path d="M12 11l0 6" />
+                    <path d="M9 14l6 0" />
+                </svg>
+            </div>
+        </div>
+        <div class="flex flex-row pt-2 justify-between">
+            <div class="flex items-center text-md text-gray-800">Beendete Streife kontrollieren</div>
+            <div class="w-12 p-1 bg-blue-500 text-white rounded cursor-pointer">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                    <path d="M12 11l0 6" />
+                    <path d="M9 14l6 0" />
+                </svg> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                    <path d="M9 9l1 0" />
+                    <path d="M9 13l6 0" />
+                    <path d="M9 17l6 0" />
+                </svg>
+            </div>
+        </div>
+    </footer>
 </div>
 
+<!-- <div class="flex justify-between bg-gray-100 min-h-32 w-128 m-4 rounded-lg shadow-lg">
+    <div class="sm:px-6 p-2 flex mt-4 sm:mt-0 ml-4 sm:ml-0 items-center justify-center bg-red-400 sm:rounded-tl sm:rounded-bl w-12 h-12 sm:h-auto sm:w-auto text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+            <path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-2.3-8.7l1.3 1.29 3.3-3.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-2-2a1 1 0 0 1 1.4-1.42z" />
+        </svg>
+    </div>
+    <div class="flex flex-col justify-center xl:-ml-4 pl-4 xl:pl-1 sm:w-3/5 pt-4 sm:pb-4 pb-2">
+        <p class="text-lg text-gray-800 dark:text-gray-100 font-semibold pb-1">Headertext</p>
+        <p class="h-12 text-sm text-gray-600 dark:text-gray-400 font-normal line-clamp">Content</p>
+    </div>
+    <div class="flex sm:flex-col sm:justify-center sm:border-l dark:border-gray-700 items-center border-gray-300 sm:w-1/6 pl-4 sm:pl-0 cursor-pointer" (click)="close()">
+        <div class="pt-2 pb-2 w-full flex justify-center">
+            <span class="text-sm font-semibold text-red-400">OK</span>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="absolute flex w-128 top-0 justify-center bg-red-100">
+    test
+</div> -->
+
 <!-- side-modal -->
-<div class="absolute w-128 top-0 right-0 bottom-0 bg-gray-100">
+<!-- <div class="absolute w-128 top-0 right-0 bottom-0 bg-gray-100">
     <header class="flex h-16 px-4 items-center justify-between border-b border-borderline">
         <p class="mr-8 dark:text-gray-50 text-gray-800 focus:outline-none text-2xl font-semibold leading-6 text-light">
             {{ title }}
@@ -27,7 +84,7 @@
     <footer class="fixed flex py-2 px-4 bottom-0 h-16 w-full justify-between bg-primary border-t border-borderline">
         <ng-container *ngTemplateOutlet="toolbar"></ng-container>
     </footer>
-</div>
+</div> -->
 
 <ng-template #toolbar>
     <div>

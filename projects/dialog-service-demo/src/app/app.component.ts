@@ -13,11 +13,10 @@ export class AppComponent {
   openDialog(): void {
     // open a dialog by component
     const contentRef = this.dialogService.open(ContentComponent, {
-      title: 'Peach is here by Dialog',
+      title: 'Die aktuelle Streife ist beendet.',
       data: { id: '123'},
-      css: 'bg-red-300',
+      position: 'top-left',
       onClose: (data: any) => {
-        console.log('closed with data')
         console.log(data);
       },
       // pass all your custom events

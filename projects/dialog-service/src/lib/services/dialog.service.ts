@@ -15,7 +15,7 @@ import { DialogServiceComponent } from '../components/dialog-service.component';
 export interface IDialogOptions {
   title?: string;
   data?: any;
-  css?: string;
+  position?: string;
   id?: string;
   onClose?: (res: any) => void;
   onPeach?: (res: any) => void;
@@ -66,8 +66,9 @@ export class DialogService {
     const dialogElement = (<EmbeddedViewRef<any>>componentRef.hostView)
       .rootNodes[0];
 
-    if (options?.css) {
-      dialogElement.classList.add(...options.css.split(' '));
+    if (options?.position) {
+      const styleElement = dialogElement.firstChild as HTMLStyleElement;
+      styleElement.classList.add(...options.position.split(' '));
     }
     if (options?.id) {
       dialogElement.id = options.id;

@@ -8,8 +8,7 @@ import { DialogServiceComponent } from 'projects/dialog-service/src/public-api';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContentComponent {
-  title: string = 'Title'
-  @Input() peachSomething: string = 'default peach';
+  @Input() peachSomething: string = 'Die aktuelle Streife ist beendet.';
   @Output() onPeach: EventEmitter<string> = new EventEmitter<string>();
 
   // we can use another method
