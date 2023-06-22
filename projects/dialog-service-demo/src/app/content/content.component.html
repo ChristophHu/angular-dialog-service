@@ -1,6 +1,41 @@
-<div class="bg-gray-100 animate.fromright w-128 p-3 rounded shadow-lg">
+<!-- <div class="bg-gray-100 animate.fromright min-h-32 w-128 p-3 rounded shadow-lg">
     Hello {{ peachSomething }} <br>
     <button class="btn-rev" (click)="ok()">Yes Iniside peech</button>
     <button class="btn-rev" (click)="click()">On peach event</button>
     <button class="btn-rev" (click)="close()">Close rose</button>
+</div> -->
+
+<div class="absolute flex w-128 top-0 justify-center bg-red-100">
+    test
 </div>
+
+<!-- side-modal -->
+<div class="absolute w-128 top-0 right-0 bottom-0 bg-gray-100">
+    <header class="flex h-16 px-4 items-center justify-between border-b border-borderline">
+        <p class="mr-8 dark:text-gray-50 text-gray-800 focus:outline-none text-2xl font-semibold leading-6 text-light">
+            {{ title }}
+        </p>
+        <div class="flex flex-row top-4 right-4 content-center">
+            <button class="w-6 h-6 ml-2 focus:outline-none rounded-md cursor-pointer" (click)="close()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 6L6 18" stroke-linecap="round" stroke-linejoin="round" /><path d="M6 6L18 18" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+        </div>
+    </header>
+    <div class="content">
+
+    </div>
+    <footer class="fixed flex py-2 px-4 bottom-0 h-16 w-full justify-between bg-primary border-t border-borderline">
+        <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+    </footer>
+</div>
+
+<ng-template #toolbar>
+    <div>
+        <button (click)="close()" type="button" class="p-2 mr-3 bg-gray-800 text-white rounded">Abbrechen</button>
+        <!-- <button *ngIf="!!(formValue?.id)" (click)="delete(formValue.id)" type="button" class="p-2 mr-3 bg-red-400 text-black rounded">löschen</button> -->
+    </div>
+    <div>
+        <!-- <button *ngIf="formStatus?.dirty && formStatus?.valid && !!(formValue?.id)" (click)="update()" type="button" class="p-2 ml-3 bg-gray-800 text-white rounded">Speichern</button>
+        <button *ngIf="formStatus?.dirty && formStatus?.valid && formValue?.id == ''" (click)="create()" type="button" class="p-2 ml-3 bg-gray-800 text-white rounded">Erstellen</button> -->
+    </div>
+</ng-template>

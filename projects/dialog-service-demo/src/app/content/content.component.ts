@@ -8,6 +8,7 @@ import { DialogServiceComponent } from 'projects/dialog-service/src/public-api';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContentComponent {
+  title: string = 'Title'
   @Input() peachSomething: string = 'default peach';
   @Output() onPeach: EventEmitter<string> = new EventEmitter<string>();
 
