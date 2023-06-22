@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { DialogComponent } from '../dialog/dialog.component';
+import { DialogServiceComponent } from 'projects/dialog-service/src/public-api';
 
 @Component({
   selector: 'app-content',
@@ -18,7 +18,7 @@ export class ContentComponent {
   data: any;
 
   // optionally find Rose
-  dialog!: DialogComponent;
+  dialog!: DialogServiceComponent;
 
   constructor() {
     console.log('created');
@@ -37,6 +37,6 @@ export class ContentComponent {
     this.dialog.close('123');
 
     // or this for closing without emitting
-    this.onChildClose.emit();
+    // this.onChildClose.emit();
   }
 }

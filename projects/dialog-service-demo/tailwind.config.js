@@ -5,7 +5,11 @@ module.exports = {
     './projects/**/*.{html,ts,css,scss,sass,less,styl}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '128': '32rem',
+      },
+    },
   },
   plugins: [],
 }

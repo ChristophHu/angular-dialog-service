@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DialogModule } from './dialog/dialog.module';
-import { ContentModule } from './content/content.module';
+import { DialogServiceModule } from 'projects/dialog-service/src/public-api';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
-    DialogModule,
-    ContentModule
+    DialogServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

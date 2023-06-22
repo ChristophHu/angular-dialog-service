@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { DialogServiceComponent } from './dialog-service.component';
-
-
+import { DialogServiceComponent } from './components/dialog-service.component';
+import { DialogService } from './services/dialog.service';
 
 @NgModule({
   declarations: [
@@ -11,6 +10,9 @@ import { DialogServiceComponent } from './dialog-service.component';
   ],
   exports: [
     DialogServiceComponent
+  ],
+  providers: [
+    DialogService
   ]
 })
 export class DialogServiceModule { }

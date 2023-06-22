@@ -8,8 +8,9 @@ import {
   Type,
   createComponent,
 } from '@angular/core'
-import { DialogComponent } from './dialog.component';
+
 import { DOCUMENT } from '@angular/common';
+import { DialogServiceComponent } from '../components/dialog-service.component';
 
 export interface IDialogOptions {
   title?: string;
@@ -26,7 +27,7 @@ export interface IDialogOptions {
 })
 export class DialogService {
   // keep references of known ids
-  dialogs: { [key: string]: DialogComponent | null } = {};
+  dialogs: { [key: string]: DialogServiceComponent | null } = {};
 
   constructor(
     // bring in the application ref
@@ -55,7 +56,7 @@ export class DialogService {
     const rootNode = (<EmbeddedViewRef<any>>childRef.hostView).rootNodes;
 
     // then create the dialog that will host it
-    const componentRef = createComponent(DialogComponent, {
+    const componentRef = createComponent(DialogServiceComponent, {
       environmentInjector: this.appRef.injector,
       // pass the child here
       projectableNodes: [rootNode],

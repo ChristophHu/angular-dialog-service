@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { DialogService } from './dialog/dialog.service';
-import { DialogComponent } from './dialog/dialog.component';
 import { ContentComponent } from './content/content.component';
+import { DialogService } from 'projects/dialog-service/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +15,7 @@ export class AppComponent {
     const contentRef = this.dialogService.open(ContentComponent, {
       title: 'Peach is here by Dialog',
       data: { id: '123'},
+      css: 'bg-red-300',
       onClose: (data: any) => {
         console.log('closed with data')
         console.log(data);

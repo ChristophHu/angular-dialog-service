@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, HostListener, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.sass'],
+  selector: 'lib-dialog-service',
+  templateUrl: './dialog-service.component.html',
+  styleUrls: ['./dialog-service.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
-export class DialogComponent {
+export class DialogServiceComponent {
   @Output() onClose: EventEmitter<any> = new EventEmitter<any>();
 
   title: string = '';
